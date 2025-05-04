@@ -1,0 +1,164 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+# Usually these files are created by PyInstaller in a subdirectory.
+# If you use PyInstaller, uncomment this line and add `output_dir_name/` to it.
+# *.manifest
+# *.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# PEP 582; __pypackages__ directory
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak
+venv.bak
+
+# IDEs and editors
+.idea/
+.vscode/
+*.project
+*.pydevproject
+*.tmproj
+.toolstarget
+project.vim
+project.nvim
+Session.vim
+*.sublime-workspace
+*.sublime-project
+
+#secrets
+*.env.*
+!*.env.example # Keep example env files
+
+# OS specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Poetry
+poetry.lock # Often committed, but can be ignored if all devs use `poetry install` from pyproject.toml
+# If you choose to ignore poetry.lock, make sure your pyproject.toml has precise versions
+# or use `poetry export` to generate a requirements.txt for production if needed.
+# For ADK samples, it's common to commit poetry.lock to ensure consistent environments.
+# So, you might want to REMOVE the line below if you want to track poetry.lock:
+# poetry.lock
+
+# ADK specific
+# Log files
+/tmp/agents_log/
+*.log
+logs/
+
+# Data files (especially if they are large or downloaded by scripts)
+# You might want to be more specific here based on your agent's data
+data/corpus/*.pdf # If your corpus PDFs are downloaded and large
+data/corpus/*.txt # If text files are large or generated
+# Consider adding specific large model files if downloaded locally
+
+# Vertex AI RAG Engine or other service credentials if accidentally downloaded
+# (these should ideally be in .env or handled by gcloud auth)
+*.json # Be careful with this, might ignore useful JSON configs.
+# More specific:
+# service-account-key.json
+
+# Build artifacts from agent deployment
+deployment/*.whl
+deployment/dist/
+deployment/build/
+
+# Temp Selenium/WebDriver directories if used by any tool (like brand-search-optimization)
+/tmp/selenium/
+
+# SQLite databases if used for local testing/caching
+*.sqlite
+*.sqlite3
+
+# Cache files for tools or libraries
+.cache/
+*.cache

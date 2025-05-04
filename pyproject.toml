@@ -1,0 +1,36 @@
+[project]
+name = "crisis-response"
+version = "0.1.0"
+description = "Crisis Response Information Agent using ADK and RAG"
+authors = [{name = "KC Ayyagari", email = "krischy@google.com"}] # Correct format: list of tables
+readme = "README.md"
+license = "Apache License 2.0"
+
+[tool.poetry] # Keep this section for poetry specific things like packages
+packages = [{include = "crisis_response"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+google-adk = "^0.1.0" # Or your specific ADK version
+python-dotenv = "^1.0.0"
+google-cloud-storage = "^2.10.0" # For corpus preparation
+google-api-python-client = "^2.88.0" # For Google Search if making direct calls (ADK tool may abstract this)
+ Pillow = "^10.0.0" # Often a dependency for multimodal aspects or some GCP libraries
+requests = "^2.31.0" # For downloading files in corpus prep
+google-cloud-aiplatform = {extras = ["adk", "agent-engines"], version = "^1.88.0"}
+llama-index = "^0.12"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+pytest-asyncio = "^0.21.1" # If you have async tests
+absl-py = "^2.1.0"
+
+[tool.poetry.group.deployment.dependencies]
+google-cloud-build = "^3.20.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.adk] # ADK-specific configuration if needed
+module = "crisis_response"
