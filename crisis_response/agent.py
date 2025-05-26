@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 
 # --- Configuration ---
-MODEL_NAME = os.getenv("MODEL_NAME", "gemini-2.0-flash-001")  # Default if not set
+MODEL_NAME = os.getenv("MODEL_NAME", "gemini-2.0-flash")  # Default if not set
 RAG_CORPUS = os.getenv("RAG_CORPUS")
 
 # --- Tool Definition ---
@@ -54,7 +54,7 @@ else:
 # --- Agent Definition ---
 
 search_agent = Agent(
-    model="gemini-2.0-flash",
+    model=MODEL_NAME,
     name="GoogleSearch",
     instruction="""
 You are an advanced AI, operating as an elite Google Search specialist. Your sole mission is to provide precise, real-time information on crisis situations directly and immediately in response to user requests.
